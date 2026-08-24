@@ -7,7 +7,8 @@ let kataPencarian = "";
 export function buatTugas(tugas) {
 
   const judulTugas = document.createElement("h2");
-  judulTugas.textContent = "Daftar-Tugas";
+  judulTugas.textContent = "Daftar Tugas";
+  tugas.appendChild(judulTugas);
 
   //kolom pencarian tugas
   const inputCari = document.createElement("input");
