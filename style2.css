@@ -1,0 +1,456 @@
+/*reset*/
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+
+    /*membuat halaman pas 1 layar */
+    display: grid;
+    grid-template-rows: 65px 1fr 35px;
+
+    overflow: hidden;
+}
+
+/*header*/
+header {
+    width: 100%;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 25px;
+
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #ffffff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+/*tombol darkmode*/
+#toggle-tema {
+    position: fixed;
+    top: 13px;
+    right: 20px;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+
+    padding: 8px 14px;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    background-color: #111111;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/*layout utama*/
+#app {
+    width: 100%;
+    height: 100%;
+
+    max-width: 1400px;
+    margin: 0 auto;
+
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 15px;
+
+    align-items: stretch;
+
+    min-height: 0;
+}
+
+/*status load*/
+#app > p {
+    position: absolute;
+
+    top: 70px;
+    left: 25px;
+
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 12px;
+}
+
+/*footer*/
+footer {
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 20px;
+
+    font-size: 13px;
+
+    background-color: #ffffff;
+}
+
+footer p {
+    margin: 0;
+}
+
+/*tugas*/
+.tugas {
+    grid-column: 1;
+    grid-row: 1;
+
+    height: 100%;
+
+    padding: 18px;
+
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+
+    background-color: #ffffff;
+
+    overflow: hidden;
+}
+
+.tugas h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.tugas input {
+    width: 100%;
+
+    padding: 10px 12px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.tugas input:focus {
+    border-color: #999999;
+}
+
+.tugas form {
+    width: 100%;
+}
+
+.tugas form button {
+    margin-bottom: 12px;
+}
+
+.tugas > button {
+    margin-right: 3px;
+    margin-bottom: 10px;
+
+    padding: 7px 10px;
+
+    font-size: 12px;
+}
+
+.tugas ul {
+    list-style: none;
+
+    padding: 0;
+    margin: 5px 0 0 0;
+
+    max-height: calc(100vh - 300px);
+
+    overflow-y: auto;
+}
+
+.tugas li {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 9px;
+
+    margin-bottom: 7px;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+
+    background-color: #fafafa;
+
+    cursor: grab;
+
+    font-size: 13px;
+}
+
+.tugas li:active {
+    cursor: grabbing;
+}
+
+.tugas li button {
+    padding: 6px 9px;
+    font-size: 11px;
+}
+
+.tugas li button:first-of-type {
+    margin-left: auto;
+}
+
+/*catatan*/
+.catatan {
+    grid-column: 2;
+    grid-row: 1;
+
+    height: 100%;
+
+    padding: 18px;
+
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+
+    background-color: #ffffff;
+
+    overflow: hidden;
+}
+
+.catatan h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.catatan textarea {
+    width: 100%;
+    height: 90px;
+
+    padding: 10px 12px;
+
+    resize: none;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    outline: none;
+}
+
+.catatan textarea:focus {
+    border-color: #999999;
+}
+
+.catatan > button {
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+.daftar-catatan {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    max-height: calc(100vh - 300px);
+
+    overflow-y: auto;
+}
+
+.kartu-catatan {
+    padding: 10px;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+
+    background-color: #fafafa;
+
+    font-size: 13px;
+}
+
+.kartu-catatan p {
+    margin-top: 0;
+    line-height: 1.4;
+}
+
+.kartu-catatan button {
+    padding: 6px 9px;
+    font-size: 11px;
+}
+
+/*widget*/
+.cuaca {
+    grid-column: 3;
+    grid-row: 1;
+
+    height: 100%;
+
+    padding: 18px;
+
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+
+    background-color: #ffffff;
+
+    overflow: hidden;
+}
+
+.cuaca h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/*kutipan*/
+.kutipan {
+    margin-bottom: 15px;
+}
+
+.kutipan h2 {
+    display: block;
+    visibility: visible;
+}
+
+.kutipan p {
+    margin: 0;
+
+    padding-left: 12px;
+
+    border-left: 3px solid #dddddd;
+
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/*form cuaca*/
+.cuaca form {
+    display: flex;
+
+    gap: 7px;
+
+    margin-top: 15px;
+}
+
+.cuaca form input {
+    flex: 1;
+    min-width: 0;
+
+    padding: 10px 12px;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.cuaca form button {
+    padding: 8px 12px;
+}
+
+/*info cuaca*/
+#info-cuaca {
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    font-size: 14px;
+}
+
+#info-cuaca p {
+    margin: 4px 0;
+}
+
+/*dark mode*/
+body.dark-mode {
+    background-color: #181818;
+    color: #ffffff;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #181818;
+    border-color: #333333;
+}
+
+body.dark-mode .tugas,
+body.dark-mode .catatan,
+body.dark-mode .cuaca {
+    background-color: #222222;
+    border-color: #3a3a3a;
+}
+
+body.dark-mode .tugas li,
+body.dark-mode .kartu-catatan {
+    background-color: #2a2a2a;
+    border-color: #444444;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+body.dark-mode #info-cuaca {
+    border-color: #444444;
+}
+
+body.dark-mode .kutipan p {
+    border-left-color: #555555;
+}
+
+/*responsive*/
+@media (max-width: 900px) {
+    body {
+        display: block;
+        overflow: auto;
+    }
+
+    #app {
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .tugas,
+    .catatan,
+    .cuaca {
+        grid-column: 1;
+        grid-row: auto;
+        height: auto;
+    }
+
+    .tugas ul,
+    .daftar-catatan {
+        max-height: none;
+    }
+
+    footer {
+        height: 40px;
+    }
+}
