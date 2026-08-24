@@ -66,7 +66,7 @@ const kutipan = document.createElement("section");
 kutipan.className = "kutipan";
 
 const judulKutipan = document.createElement("h2");
-judulKutipan.textContent = "Kutipan Hari Ini";
+judulKutipan.textContent = "Widget";
 
 const isiKutipan = document.createElement("p");
 isiKutipan.textContent = "Memuat kutipan...";
