@@ -454,3 +454,129 @@ body.dark-mode .kutipan p {
         height: 40px;
     }
 }
+/*responsive HP*/
+@media (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+        height: auto;
+    }
+
+    body {
+        display: block;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    /*header*/
+    header {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    /*tombol dark mode*/
+    #toggle-tema {
+        top: 12px;
+        right: 12px;
+    }
+
+    #toggle-tema button {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    /*app*/
+    #app {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 12px;
+        gap: 12px;
+
+        margin: 0;
+    }
+
+    /*semua kotak*/
+    .tugas,
+    .catatan,
+    .cuaca {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+
+        padding: 14px;
+
+        border-radius: 10px;
+    }
+
+    /*judul*/
+    .tugas h2,
+    .catatan h2,
+    .cuaca h2 {
+        font-size: 19px;
+        margin-bottom: 12px;
+    }
+
+    /*input*/
+    .tugas input,
+    .catatan textarea,
+    .cuaca form input {
+        font-size: 13px;
+    }
+
+    /*form cuaca*/
+    .cuaca form {
+        width: 100%;
+    }
+
+    .cuaca form button {
+        white-space: nowrap;
+    }
+
+    /*list tugas*/
+    .tugas ul {
+        max-height: none;
+        overflow: visible;
+    }
+
+    .tugas li {
+        flex-wrap: wrap;
+        font-size: 13px;
+    }
+
+    .tugas li button {
+        font-size: 10px;
+        padding: 5px 7px;
+    }
+
+    /*catatan*/
+    .catatan textarea {
+        height: 100px;
+    }
+
+    .daftar-catatan {
+        max-height: none;
+        overflow: visible;
+    }
+
+    /*cuaca*/
+    #info-cuaca {
+        font-size: 13px;
+    }
+
+    /*footer*/
+    footer {
+        height: 40px;
+        padding: 0 15px;
+        font-size: 11px;
+    }
+}
